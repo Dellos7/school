@@ -1,5 +1,7 @@
 # Professor M's School for Gifted Coders [![Build Status](https://travis-ci.org/Dellos7/school.svg?branch=master)](https://travis-ci.org/Dellos7/school)
 
+**Modified readme Dellos7**
+
 All of the tutorials at UnCon 2017 will be based on Professor M's School for Gifted Coders.  The following sections will explain more about the scenario and how to install the required modules and sample data.
 
 ## Contents
