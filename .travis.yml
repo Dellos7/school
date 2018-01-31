@@ -23,12 +23,12 @@ jobs:
     - cd package
     script:
     - "./pack.php -v $(date +'%Y%m%d-%H.%M.%S')"
-    - "./pack.php -v $(date +'%Y%m%d-%H.%M.%S') -w 40" #Using 40 as a typical path length. May not work for all Windows installations
+    - "./pack.php -v $(date +'%Y%m%d-%H.%M.%S') -w 40"
     before_deploy: git tag "$(date +'%Y%m%d-%H.%M.%S')-$(git log --format=%h -1)"
     deploy:
       file_glob: true
       provider: releases
       file: releases/sugarcrm-ProfessorM-*.zip
       api_key:
-        secure: wZjieCCyLewnTuR1vLjtVLp+ANtaq2ltP6kyiBcE33j2WyyWIiQqHtmjWAnnpq3Kkz64Pe1epfWuFJagXQyMvH9ACojmk0bZmbJjt293g7YWVVHOVco69Ti9+D4bTuHNeWIS31xbDTdzgiz/t9c2dVt8ISLFsIG7GJUsg3P+ye+GH/zbmPmrcmyMLnEtlymOSvbg1RiCQ9AJyUywLenes1Un/2nZuJpkZ76KwwnQNHH6xF1iIRtbR41/B1nRKiJgsArfz1FQp5sM6naOZiqnGejuQ8LswxYGbWZM27iJblW+NpTWJrvNswGEekEb63mVGIx3VJjEGKqkD1cjOYmaGG6nenSEI55r6BTEtoa9zV02pjQ8MMBaX5gPftvnmDrHGqwS7vtqM1YjJ8M0dWhkNqmz4fvss+IuPveaYNyHHeytQElhSuOoS0BAJsq7q3eZbK+Wj7Nd6qnXbJ6zJtuounljG9Kz9bmP82HUA04xn5lSpIIfi+KSb8CiQfzzRf2iws8wpfZ5fAU8OxImuEDaWRjH7473Uyr05Ai4v8d9gx9RmHhjJngOpjyJ4QekHRMmxO3m3msmhEkNjDq+9eM6pQDadwbnQtYTaTSyVXmq8UmV54sqhj8ZRskFmYlqEeM5b0qi+VujREykfnY4a5uJyxXOFLMlAP8HRUK3JGRX3kE=
+        secure: XdtTSx8n7WA632JHEqPWCFncQydeiPuy2blzFoh1xONlP8PvGBbaFCMKMQuqaAceV+r0zxOgLHZN+sGnu0VKzjTrxeQQ9YL5cpmZPAjA6w28qycgrjgcrlNyegBIzvmXP3MFwzqSEM7CvisPck5Fi73WcTOkDgSHSO/3gNm8UXYAN/1PVd7kTD0EO7CigqLNe1+FqeBH9P3W6YJXRVlOXZ6azMmnk2m6B1+jzijzcJidxk0QU+ssFSMth03kEXhnPWiPsVVk6IpzxKW7p9X4kWarPsE88FAgzRcIkh6/Sc5UHufjacAfFpWnqG/zg5Kf6TYxTixd3ziw5mHPzDZoktRpaskuhd+ZXukOKLVq6mmBvW6c9SdZuUHel7NdAV8NxZJn4RITP24sWvS9BAKbaas9+rCc8IodoCflKbRcLUgrjjFksOy1Zw5hVhlprte768OK4LgeJ9OoEMXII+jO1r0CQfskKnhwLWMWWmbQUXBRuNWMi/4pwpUXV+IcvI92HvZP7R36UOE6PAy/AG/Et1eoAWSsy9wt01DtH2VrioNikPKZljgCAp8p9IQL8wU47uqhbn/fiZ1XncaZfp3ujsYuQ+rKxi5RWeMqNKofJ+l+xDCIfYrkQrtr0i/HIKqNx5zxVuJzn+NGib7AsbZ6GWX44rrrFZ8iEDJDCLVY57s=
       skip_cleanup: true
